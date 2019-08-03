@@ -1,5 +1,7 @@
 import React from 'react';
 import profile from './Profile.module.css'
+import Posts from '../Posts/Posts';
+
 
 const Profile = () => {
   return (
@@ -10,7 +12,7 @@ const Profile = () => {
               <div className={profile.profile}>
                 <div className={profile.img}>
                 
-                  <img className={profile.img} src={require(".././vk.jpg")}></img>
+                  <img className={profile.img} src={require("../../vk.jpg")}></img>
                 </div>
 
                 <div className={profile.info}>
@@ -37,14 +39,8 @@ const Profile = () => {
                
               </div>
 
-              <div className={profile.posts__upload}>
+              <Posts/>
 
-
-              </div>
-
-              <div className="posts">
-
-              </div>
 
             {/* <Content /> */} 
             </section>

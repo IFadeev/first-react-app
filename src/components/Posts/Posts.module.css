@@ -1,0 +1,17 @@
+/*Posts"
+===========================*/
+
+
+.upload {
+  background-color: #4a7649;
+  width: 100%;
+  height: 10%;
+  border: 1px solid #000;
+}
+
+.posts {
+  background-color: #4a7649;
+  width: 100%;
+  height: 30%;
+  border: 1px solid #000;
+}

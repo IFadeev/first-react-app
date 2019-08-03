@@ -1,9 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import maincss from './App.module.css';
-import Header from './components/Header';
-import Menu from './components/Menu.jsx';
-import Profile from './components/Profile.jsx';
+import Header from './components/Header/Header';
+import Menu from './components/Menu/Menu';
+import Profile from './components/Profile/Profile';
+
 
 
 
@@ -17,6 +18,7 @@ const App = () => {
 
             <Menu/>
             <Profile/>
+            
             
           </div>
         
