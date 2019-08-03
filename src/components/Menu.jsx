@@ -1,9 +1,10 @@
 import React from 'react';
+import menu from './Menu.module.css'
 
 const Menu = () => {
   return (
-    <section className="menu">
-              <nav className="nav">
+    <section className={menu.menu}>
+              <nav className={menu.nav}>
                 <a href="#">My profile</a>
                 <a href="#">News</a>
                 <a href="#">Messages</a>
@@ -15,4 +16,4 @@ const Menu = () => {
   );
 }
 
-export default Menu;
+export default Menu

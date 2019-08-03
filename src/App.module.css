@@ -1,0 +1,38 @@
+html {
+  background-color: #edeef0;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box
+}
+
+
+/*Container
+===========================*/
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+/*main-content"
+===========================*/
+
+.container {
+  
+  margin-top: 10px;
+}
+

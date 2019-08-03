@@ -1,0 +1,16 @@
+
+/*Menu"
+===========================*/
+
+.menu {
+  float: left;
+  width: 20%;
+  background-color: #b8c9db;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  
+}

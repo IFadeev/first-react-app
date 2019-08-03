@@ -1,20 +1,19 @@
 import React from 'react';
+import profile from './Profile.module.css'
 
 const Profile = () => {
   return (
-    <section className="content">
+    <section className={profile.content}>
 
-              <div className="background-image">
+              <div className={profile.background__image}></div>
 
-              </div>
-
-              <div className="profile">
-                <div className="profile__img">
+              <div className={profile.profile}>
+                <div className={profile.img}>
                 
-                  <img className="profile__img" src={require(".././vk.jpg")}></img>
+                  <img className={profile.img} src={require(".././vk.jpg")}></img>
                 </div>
 
-                <div className="profile__info">
+                <div className={profile.info}>
                   <div className="profile__info-name">
                     <p>Fadeev Ivan</p>
 
@@ -38,7 +37,7 @@ const Profile = () => {
                
               </div>
 
-              <div className="posts-upload">
+              <div className={profile.posts__upload}>
 
 
               </div>
