@@ -4,31 +4,38 @@ import maincss from './App.module.css';
 import Header from './components/Header/Header';
 import Menu from './components/Menu/Menu';
 import Profile from './components/Profile/Profile';
-
-
-
-
+import Dialogues from './components/Dialogues/Dialogues';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+import News from './components/News/News';
+import Music from './components/Music/Music';
+import Settings from './components/Settings/Settings';
 
 const App = () => {
-   return (
+  return (
+    <BrowserRouter>
       <div className={maincss.App}>
 
-        <Header/>
-          <div className={maincss.container}>
+        <Header />
+        <div className={maincss.container}>
+          <Menu />
 
-            <Menu/>
-            <Profile/>
-            
-            
-          </div>
-        
-         
-      {/* <App /> */}  
-      </div> 
-      
-    );
+          <Route path ='/Profile' component={Profile} />
+          <Route path ='/Dialogues' component={Dialogues} />
+          <Route path ='/News' component={News}/>
+          <Route path ='/Music' component={Music}/>
+          <Route path = '/Settings' component={Settings}/>
+
+
+
+
+        </div>
+
+
+        {/* END -- <App/> -- */}
+      </div>
+    </BrowserRouter>
+
+  );
 }
-
-
 
 export default App;
