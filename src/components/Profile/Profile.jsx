@@ -35,14 +35,17 @@ const Profile = () => {
                     <span>M.S. in Computer Science, RSUH</span>
                   </div>
                 </div>
-
+                
                
+               {/* <Profile/> */} 
               </div>
 
               <Posts/>
 
+              
 
-            {/* <Content /> */} 
+
+            {/* <Content/> */} 
             </section>
   );
 }

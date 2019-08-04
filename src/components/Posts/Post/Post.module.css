@@ -1,0 +1,19 @@
+/*Post"
+===========================*/
+
+.block {
+  margin: 10px;
+}
+
+.item {
+  display: flex;
+  margin: 10px;
+}
+
+img {
+  width: 80px;
+}
+
+.header {
+  margin: 10px;
+}
