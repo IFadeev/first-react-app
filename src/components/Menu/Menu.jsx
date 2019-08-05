@@ -1,16 +1,16 @@
 import React from 'react';
-import menu from './Menu.module.css'
-import { Link } from 'react-router-dom';
+import menu from './Menu.module.css';
+import { NavLink } from 'react-router-dom';
 
 const Menu = () => {
   return (
     <section className = { menu.menu }>
               <nav className = { menu.nav }>
-                <Link to = "/Profile"> My profile </Link>
-                <Link to = "/Dialogues"> Dialogues </Link>
-                <Link to = "/News"> News </Link>
-                <Link to = "/Music"> Music </Link>
-                <Link to = "/Settings"> Settings </Link>
+                <NavLink to = "/Profile"> My profile </NavLink>
+                <NavLink to = "/Dialogues"> Dialogues </NavLink>
+                <NavLink to = "/News"> News </NavLink>
+                <NavLink to = "/Music"> Music </NavLink>
+                <NavLink to = "/Settings"> Settings </NavLink>
               </nav>
 
             </section>
