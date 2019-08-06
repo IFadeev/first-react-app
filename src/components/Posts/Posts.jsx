@@ -37,7 +37,9 @@ const Posts = () => {
       message: 'I learning REACT!!',
       date: '04.08.19',
     },
-  ];
+  ];      
+
+
 
   return(
     <div className={posts.wall}>

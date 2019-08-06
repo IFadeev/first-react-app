@@ -41,21 +41,21 @@ const Dialogues = (props) => {
     }
   ]
 
+  let dialodElements = messagesData.map( dialog => <DialogueItem fullName={dialog.fullName} text={dialog.message}/>); 
+
+  console.log(<DialogueItem/>)
+
   return (
     <div className={dialog.wrapper}>
       <div className={dialog.diaolgs__content}>
         
-        <DialogueItem fullName={messagesData[0].fullName} text={messagesData[0].message} id={messagesData[0].id} />
+        {dialodElements};
 
       </div>
 
       <div className={dialog.messages}>
 
-        <Message fullName={messagesData[0].fullName} text={messagesData[0].message} />
-        <Message fullName={messagesData[1].fullName} text={messagesData[1].message}/>
-        <Message fullName={messagesData[2].fullName} text={messagesData[2].message} />
-        <Message fullName={messagesData[3].fullName} text={messagesData[3].message} />
-        <Message fullName={messagesData[2].fullName} text={messagesData[2].message} />
+        {dialodElements};
 
       </div>
     </div>
