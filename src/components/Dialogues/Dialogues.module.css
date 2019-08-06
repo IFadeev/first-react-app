@@ -12,7 +12,7 @@
 .diaolgs__content {
   position: relative;
   width: 35%;
-  max-width: ;
+ /* max-width: ;*/
   height: 100%;
   border: 1px solid #000;
 }
@@ -23,7 +23,7 @@
 
 .messages {
   width: 70%;
-  max-width: ;
+ /* max-width: ;*/
   height: 100%;
   border: 1px solid #000;
 }
@@ -39,6 +39,7 @@
   overflow: hidden;
 }
 
+/*
 .messages__item {
 
-}
+}*/

@@ -8,6 +8,11 @@
 .item {
   display: flex;
   margin: 10px;
+  flex-direction: column;
+}
+
+.item__wrapper {
+  display: flex;
 }
 
 img {
