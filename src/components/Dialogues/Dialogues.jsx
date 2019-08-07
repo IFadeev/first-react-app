@@ -69,9 +69,11 @@ const Dialogues = (props) => {
       }
     },
   ];
+
   let mssageElement = messagesData.map( dialog => <Message fullName ={dialog.fullName} text={dialog.message}/>);
 
   let chatsDataElements = chatsData.map( dialog => <DialogueItem fullName={dialog.fullName} text={dialog.message}/>); 
+  
   return (
     <div className={dialog.wrapper}>
       <div className={dialog.diaolgs__content}>
