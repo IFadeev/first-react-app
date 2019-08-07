@@ -1,12 +1,13 @@
 import React from 'react';
 import dialog from './Dialogues.module.css';
-import { NavLink } from 'react-router-dom';
-
-
+import DialogueItem from './DialogueItem/DialogueItem';
+import Message from './Message/Message';
 
 const Dialogues = (props) => {
   
-  let messagesData = [
+  let Data =[[]]
+
+  let chatsData = [
     { id: 1, 
       name: 'Ivan',
       surname: 'Fadeev',
@@ -41,56 +42,49 @@ const Dialogues = (props) => {
     }
   ]
 
-  let dialodElements = messagesData.map( dialog => <DialogueItem fullName={dialog.fullName} text={dialog.message}/>); 
 
-  console.log(<DialogueItem/>)
+  let messagesData = [
+    { id: 4, 
+      name: 'Vladimir',
+      surname: 'Kustov',
+      message: 'Ваня, привет!!!!!',
+      get fullName(){
+        return `${this.name} ${this.surname}`
+      }
+    },
+    { id: 4, 
+      name: 'Vladimir',
+      surname: 'Kustov',
+      message: 'Чем занимаетесь?!',
+      get fullName(){
+        return `${this.name} ${this.surname}`
+      }
+    },
+    { id: 4, 
+      name: 'Vladimir',
+      surname: 'Kustov',
+      message: 'Как дела вообще?!',
+      get fullName(){
+        return `${this.name} ${this.surname}`
+      }
+    },
+  ];
+  let mssageElement = messagesData.map( dialog => <Message fullName ={dialog.fullName} text={dialog.message}/>);
 
+  let chatsDataElements = chatsData.map( dialog => <DialogueItem fullName={dialog.fullName} text={dialog.message}/>); 
   return (
     <div className={dialog.wrapper}>
       <div className={dialog.diaolgs__content}>
         
-        {dialodElements};
+        {chatsDataElements};
 
       </div>
 
       <div className={dialog.messages}>
 
-        {dialodElements};
+        {mssageElement};
 
       </div>
-    </div>
-  );
-}
-
-const DialogueItem = (props) => {
-
-  const path = '/Dialogues/' + props.id;
-  return (
-    <NavLink to={path}>
-      <div className={dialog.diaolgs__item}>
-        <div className={dialog.imager}>
-          <img className={dialog.img} src={require("../../post-item-img.png")} ></img>
-        </div>
-        <div className={dialog.messages__content}>
-          <div className={dialog.header}> {props.fullName} </div>
-          <div className={dialog.text}> {props.text} </div>
-        </div>
-      </div>
-    </NavLink>
-  );
-}
-
-const Message = (props) => {
-  return (
-    <div className={dialog.messages__item}>
-      <div className={dialog.imager}>
-        <img className={dialog.img} src={require("../../post-item-img.png")} ></img>
-      </div>
-      <div className={dialog.messages__content}>
-        <div className={dialog.header}> {props.fullName} </div>
-        <div className={dialog.text}> {props.text}</div>
-      </div>
-
     </div>
   );
 }

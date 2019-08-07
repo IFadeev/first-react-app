@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import maincss from './App.module.css';
 import Header from './components/Header/Header';
 import Menu from './components/Menu/Menu';
@@ -10,7 +9,9 @@ import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 
-const App = () => {
+
+const App = (props) => {
+  
   return (
     <BrowserRouter>
       <div className = { maincss.App }>
@@ -19,11 +20,11 @@ const App = () => {
         <div className = { maincss.container }>
 
           <Menu />
-          <Route path ='/Profile' component = { Profile } />
-          <Route path ='/Dialogues' component = { Dialogues } />
-          <Route path ='/News' component = { News }/>
-          <Route path ='/Music' component = { Music }/>
-          <Route path = '/Settings' component = { Settings }/>
+          <Route path ='/Profile' render = { () => <Profile postData = {props.postData}/>  } />
+          <Route path ='/Dialogues' render = { Dialogues } />
+          <Route path ='/News' render = { News }/>
+          <Route path ='/Music' render = { Music }/>
+          <Route path = '/Settings' render = { Settings }/>
 
         </div>
 

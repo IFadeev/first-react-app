@@ -4,13 +4,15 @@ import Posts from '../Posts/Posts';
 import Profileinfo from './Profileinfo/Profileinfo'
 
 
-const Profile = () => {
+const Profile = (props) => {
+
+
   return (
     <section className={profile.content}>
 
               <Profileinfo/>
 
-              <Posts/>
+              <Posts postData = {props.postData} />
 
     </section>
   );

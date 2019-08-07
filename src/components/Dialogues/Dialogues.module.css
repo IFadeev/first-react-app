@@ -17,28 +17,12 @@
   border: 1px solid #000;
 }
 
-.diaolgs__item, .messages__item {
-  display: flex;
-}
-
 .messages {
   width: 70%;
  /* max-width: ;*/
   height: 100%;
   border: 1px solid #000;
 }
-.imager {
-  margin: 5px;
-}
-
-.messages__content {
-  padding: 5px;
-}
-
-.text {
-  overflow: hidden;
-}
-
 /*
 .messages__item {
 

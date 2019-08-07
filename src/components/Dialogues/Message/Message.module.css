@@ -1,0 +1,13 @@
+.diaolgs__item, .messages__item {
+  display: flex;
+}
+.imager {
+  margin: 5px;
+}
+.messages__content {
+  padding: 5px;
+}
+
+.text {
+  overflow: hidden;
+}
