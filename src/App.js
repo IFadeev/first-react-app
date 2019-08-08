@@ -21,10 +21,9 @@ const App = (props) => {
 
           <Menu />
           <Route path ='/Profile' render = { () => <Profile 
-                 postData = {props.appState.postData}/>  } />
+                 profilePage = {props.appState.profilePage}/>  } />
           <Route path ='/Dialogues' render = { () => <Dialogues  dialogPage = {props.appState.dialogPage}
-                 messagesData = {props.appState.messagesData} 
-                 chatsData = {props.appState.chatsData} /> } />
+                  /> } />
           <Route path ='/News' render = { News }/>
           <Route path ='/Music' render = { Music }/>
           <Route path = '/Settings' render = { Settings }/>

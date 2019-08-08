@@ -63,9 +63,7 @@ let state = {
         return `${this.name} ${this.surname}`
       }
     },
-  ]
-},
-  {
+  ],
     chatsData: [
     { id: 1, 
       name: 'Ivan',
@@ -99,7 +97,6 @@ let state = {
         return `${this.name} ${this.surname}`
       }
     }
-  ]}  
-}
-
+  ],  
+}}
 export default state;
