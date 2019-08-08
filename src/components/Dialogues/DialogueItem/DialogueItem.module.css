@@ -1,11 +1,18 @@
 .diaolgs__item, .messages__item {
   display: flex;
 }
+
+.diaolgs__item {
+  margin: 5px 0;
+  border-bottom: 1px solid #000;
+}
+
 .imager {
   margin: 5px;
 }
 .messages__content {
   padding: 5px;
+  
 }
 
 .text {

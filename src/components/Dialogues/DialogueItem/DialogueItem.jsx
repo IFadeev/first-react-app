@@ -8,6 +8,7 @@ const DialogueItem = (props) => {
   return (
     <NavLink to={path}>
       <div className={dialog.diaolgs__item}>
+
         <div className={dialog.imager}>
           <img className={dialog.img} src={require("../../../post-item-img.png")} ></img>
         </div>
@@ -15,6 +16,7 @@ const DialogueItem = (props) => {
           <div className={dialog.header}> {props.fullName} </div>
           <div className={dialog.text}> {props.text} </div>
         </div>
+        
       </div>
     </NavLink>
   );  
