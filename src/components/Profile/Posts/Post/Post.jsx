@@ -9,7 +9,7 @@ const Post = (props) => {
         <div className={post.item__wrapper}>
 
           <div className={post.img}>
-            <img src={require("../../../post-item-img.png")}></img>
+            <img src={require("../../../../post-item-img.png")}></img>
           </div>
 
           <header className={post.header}>
