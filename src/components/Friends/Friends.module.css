@@ -1,0 +1,12 @@
+.friends__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 80vh;
+
+  background-color: #3D8BDD;
+}
+
+.block__wrapper {
+  width: 40%;
+}

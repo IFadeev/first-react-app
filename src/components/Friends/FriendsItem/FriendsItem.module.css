@@ -1,0 +1,28 @@
+.friends__content {
+  position: relative;
+  width: 80%;
+ /* max-width: ;*/
+  height: 100%;
+
+}
+
+.friends__item, .friends__item {
+  display: flex;
+}
+
+.friends__item {
+  margin: 5px 0;
+  border-bottom: 1px solid #000;
+}
+
+.imager {
+  margin: 5px;
+}
+.friends__content {
+  padding: 5px;
+  
+}
+
+.text {
+  overflow: hidden;
+}

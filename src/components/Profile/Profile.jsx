@@ -1,8 +1,8 @@
 import React from 'react';
 import profile from './Profile.module.css'
 import Posts from './Posts/Posts';
-import Profileinfo from './Profileinfo/Profileinfo'
-
+import Profileinfo from './Profileinfo/Profileinfo';  
+import Friends from '../Friends/Friends';
 
 const Profile = (props) => {
 
@@ -13,6 +13,8 @@ const Profile = (props) => {
               <Profileinfo/>
 
               <Posts postData = {props.profilePage.postData} />
+
+           {/*} <Friends/> */}
     </section>
   );
 }

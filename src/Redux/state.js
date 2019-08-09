@@ -98,5 +98,32 @@ let state = {
       }
     }
   ],  
-}}
+},
+
+frinedsPage: [
+    { id: 1, 
+      name: 'Dmitriy',
+      surname: 'Menshikov',
+      get fullName(){
+        return `${this.name} ${this.surname}`
+      }
+    },
+    { id: 2, 
+      name: 'Alex',
+      surname: 'Subbutin',
+      get fullName(){
+        return `${this.name} ${this.surname}`
+      }
+    },
+    { id: 3, 
+      name: 'Vladimir',
+      surname: 'Kustov',
+      get fullName(){
+        return `${this.name} ${this.surname}`
+      }
+    }
+]
+  
+
+}
 export default state;
