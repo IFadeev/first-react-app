@@ -1,28 +1,14 @@
-.friends__content {
-  position: relative;
-  width: 80%;
- /* max-width: ;*/
-  height: 100%;
-
+.friendsColumn__frined {
+  padding: 10px;
 }
 
-.friends__item, .friends__item {
-  display: flex;
+.friendsColumn__img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #9EA3CF;
 }
 
-.friends__item {
-  margin: 5px 0;
-  border-bottom: 1px solid #000;
-}
+.friendsColumn__name {
 
-.imager {
-  margin: 5px;
-}
-.friends__content {
-  padding: 5px;
-  
-}
-
-.text {
-  overflow: hidden;
 }

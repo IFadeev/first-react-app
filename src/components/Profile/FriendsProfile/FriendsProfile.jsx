@@ -4,21 +4,19 @@ import { NavLink } from 'react-router-dom';
 import FriendsItem from './FriendsProfileItem/FriendsProfileItem';
 
 
-const Friends = (props) => {
+const FriendsProfile = (props) => {
 
 let frindsElement = props.dialogPage.
-map( frined => <FriendsItem fullName={frined.fullName} />);
+map( frined => <FriendsItem name={frined.name} />);
 
   return (
 
-      <div className={friends.friends__wrapper}>
-        <div className = {friends.block__wrapper}>
-      
+      <div className={friends.friendsColumn}>
+        
           {frindsElement}
 
-        </div>
       </div>
 
   );
 }
-export default Friends;
+export default FriendsProfile;

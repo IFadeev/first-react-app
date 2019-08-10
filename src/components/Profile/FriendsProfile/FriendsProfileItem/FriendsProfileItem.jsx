@@ -7,18 +7,13 @@ const FriendsItem = (props) => {
 
   return (
     
-    <div className={friendsItem.friends__item}>
-
-    <div className={friendsItem.imager}>
-      <img className={friendsItem.img} src={require("../../../post-item-img.png")} ></img>
+    <div className = {friendsItem.friendsColumn__frined}>
+          <div className = {friendsItem.friendsColumn__img}>
+            </div>
+            <div className = {friendsItem.friendsColumn__name}>
+            {props.name}
+            </div>
     </div>
-
-    <div className={friendsItem.friends__content}>
-      <div className={friendsItem.header}> {props.fullName}  </div>
-      
-    </div>
-
-  </div>
 
   );
 }
