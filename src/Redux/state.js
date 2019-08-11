@@ -121,6 +121,13 @@ frinedsPage: [
       get fullName(){
         return `${this.name} ${this.surname}`
       }
+    },
+    { id: 4, 
+      name: 'Andrey',
+      surname: 'Egorov',
+      get fullName(){
+        return `${this.name} ${this.surname}`
+      }
     }
 ]
   

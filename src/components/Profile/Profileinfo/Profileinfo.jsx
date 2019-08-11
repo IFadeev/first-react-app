@@ -1,6 +1,7 @@
 import React from 'react';
 import profile from './Profileinfo.module.css'
 import FriendsProfile from '../FriendsProfile/FriendsProfile';
+import Posts from '../Posts/Posts';
 
 const Profileinfo = (props) => {
   return (
@@ -12,7 +13,7 @@ const Profileinfo = (props) => {
           <img className={profile.img} src={require("../../../vk.jpg")}></img>
         </div>
 
-        <FriendsProfile/>
+        <FriendsProfile frinedsData = {props.friendsData}/>
 
 
       </div>
@@ -40,6 +41,7 @@ const Profileinfo = (props) => {
           </div>
         </div>
 
+        <Posts postData = {props.postData}/>
       </div>
       {/* <Profile/> */}
     </div>

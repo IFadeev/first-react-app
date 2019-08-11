@@ -1,13 +1,12 @@
 import React from 'react';
 import friends from './FriendsProfile.module.css';
 import { NavLink } from 'react-router-dom';
-import FriendsItem from './FriendsProfileItem/FriendsProfileItem';
-
+import friendsItem from './FriendsProfile.module.css';
 
 const FriendsProfile = (props) => {
 
-let frindsElement = props.dialogPage.
-map( frined => <FriendsItem name={frined.name} />);
+let frindsElement = props.frinedsData.
+map( frined => <FriendsProfileItem name={frined.name} />);
 
   return (
 
@@ -18,5 +17,21 @@ map( frined => <FriendsItem name={frined.name} />);
       </div>
 
   );
+};
+
+const FriendsProfileItem = (props) => {
+
+  return (
+    
+    <div className = {friendsItem.friendsColumn__frined}>
+          <div className = {friendsItem.friendsColumn__img}>
+            </div>
+            <div className = {friendsItem.friendsColumn__name}>
+            {props.name}
+            </div>
+    </div>
+
+  );
 }
+
 export default FriendsProfile;

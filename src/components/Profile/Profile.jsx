@@ -6,15 +6,13 @@ import Friends from '../Friends/Friends';
 
 const Profile = (props) => {
 
-
+ 
   return (
     <section className={profile.content}>
 
-              <Profileinfo/>
+              <Profileinfo friendsData = {props.frinedsPage} postData = {props.profilePage.postData} />
 
-              <Posts postData = {props.profilePage.postData} />
-
-           {/*} <Friends/> */}
+            {/*} <Friends/> */}
     </section>
   );
 }
