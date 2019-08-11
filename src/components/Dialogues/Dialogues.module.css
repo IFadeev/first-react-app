@@ -11,14 +11,14 @@
 
 .diaolgs__content {
   position: relative;
-  width: 35%;
+  width: 100%;
  /* max-width: ;*/
   height: 100%;
   border: 1px solid #000;
 }
 
 .messages {
-  width: 70%;
+  width: 600px;
  /* max-width: ;*/
   height: 100%;
   border: 1px solid #000;
@@ -27,3 +27,16 @@
 .messages__item {
 
 }*/
+.messagesBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  width: 90%;
+  margin: 5px;
+}
+
+button {
+  margin: 0 50px 5px;
+}
