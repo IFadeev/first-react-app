@@ -1,3 +1,5 @@
+import {rerendreEntireTree} from '../render';
+
 let state = {
   profilePage: {
     postData: [
@@ -143,6 +145,7 @@ export let addPost = (postMessage) => {
     date: '08.11.19'
 };
   state.profilePage.postData.push(newPost);
+  rerendreEntireTree(state);
 }
 
 export default state;

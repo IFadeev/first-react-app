@@ -12,7 +12,8 @@ let newPostText = React.createRef();
 let addPost = () => {
   
   let text = newPostText.current.value;
-  text ? props.addPost(text) : alert('Пустое значение!')
+  text ? props.addPost(text) : alert('Пустое значение!');
+  newPostText.current.value = '';
 }
 
   return(
