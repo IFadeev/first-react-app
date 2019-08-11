@@ -19,7 +19,7 @@ const Dialogues = (props) => {
 
       <div className={dialog.messages}>
 
-        {mssageElement};
+        {mssageElement}
 
       </div>
     </div>

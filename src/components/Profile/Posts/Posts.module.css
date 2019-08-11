@@ -4,6 +4,7 @@
 .wall {
   width: 100%;
   height: auto;
+  margin: 20px 0;
 }
 
 .wall__field {
@@ -16,7 +17,7 @@ button {
 
 .field {
   width: 100%;
-  max-width: 100%;;
+  max-width: 500px;
   min-width: 100px;
   min-height: 50px;
   max-height: 120px;

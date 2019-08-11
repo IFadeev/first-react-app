@@ -4,16 +4,23 @@ import Post from './Post/Post';
 
 const Posts = (props) => {
 
-
 let postElemets = props.postData.map( post => <Post name = {post.fullName} date = {post.date} message ={post.message}/>);
+
+
+let newPostText = React.createRef();
+
+let addPost = () => {
+  let text = newPostText.current.value;
+  text ? alert('Вы ввели: '+  text) : alert('Пустое значение!')
+}
 
   return(
     <div className={posts.wall}>
       <div className={posts.upload}>
         <div className={posts.wall__field }>
-          <textarea className={posts.field} placeholder="What's up?" columns="5" rows="2"></textarea>
+          <textarea ref={newPostText} className={posts.field} placeholder="What's up?" columns="5" rows="2"></textarea>
         </div>
-        <button>Post</button>
+        <button onClick = { (addPost) }>Post</button>
       </div>
 
       {postElemets}

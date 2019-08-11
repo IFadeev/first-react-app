@@ -4,7 +4,7 @@ import post from './Post.module.css';
 const Post = (props) => {
 
   return (
-    <div className={post.rightColumn}>
+    <div>
     <div className={post.block}>
       <div className={post.item}>
         <div className={post.item__wrapper}>
