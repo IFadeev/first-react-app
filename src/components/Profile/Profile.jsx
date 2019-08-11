@@ -10,7 +10,9 @@ const Profile = (props) => {
   return (
     <section className={profile.content}>
 
-              <Profileinfo friendsData = {props.frinedsPage} postData = {props.profilePage.postData} />
+              <Profileinfo friendsData = {props.frinedsPage} 
+                           postData = {props.profilePage.postData} 
+                           addPost = {props.addPost}/>
 
             {/*} <Friends/> */}
     </section>

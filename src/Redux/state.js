@@ -5,7 +5,6 @@ let state = {
         id: 1,
         name: 'Ivan',
         surname: 'Fadeev',
-        message: 'ОуО!',
         get fullName(){
           return `${this.name} ${this.surname}`
         },
@@ -16,7 +15,6 @@ let state = {
       id: 2,
         name: 'Ivan',
         surname: 'Fadeev',
-        message: 'ОуО!',
         get fullName(){
           return `${this.name} ${this.surname}`
         },
@@ -27,7 +25,6 @@ let state = {
         id: 3,
         name: 'Ivan',
         surname: 'Fadeev',
-        message: 'ОуО!',
         get fullName(){
           return `${this.name} ${this.surname}`
         },
@@ -129,8 +126,23 @@ frinedsPage: [
         return `${this.name} ${this.surname}`
       }
     }
-]
-  
-
+  ]
 }
+
+export let addPost = (postMessage) => {
+  //let nowDate = new Date();
+    
+  let newPost = { 
+    id: 5,
+    name: 'Ivan',
+    surname: 'Fadeev',
+    get fullName(){
+      return `${this.name} ${this.surname}`
+  },
+    message: postMessage,
+    date: '08.11.19'
+};
+  state.profilePage.postData.push(newPost);
+}
+
 export default state;

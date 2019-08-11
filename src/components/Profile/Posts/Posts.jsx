@@ -10,8 +10,9 @@ let postElemets = props.postData.map( post => <Post name = {post.fullName} date 
 let newPostText = React.createRef();
 
 let addPost = () => {
+  
   let text = newPostText.current.value;
-  text ? alert('Вы ввели: '+  text) : alert('Пустое значение!')
+  text ? props.addPost(text) : alert('Пустое значение!')
 }
 
   return(
