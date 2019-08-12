@@ -148,6 +148,7 @@ export let addPost = () => {
     date: '08.11.19'
 };
   state.profilePage.postData.push(newPost);
+  state.profilePage.currentPostData.message = '';
   rerendreEntireTree(state);
 }
 

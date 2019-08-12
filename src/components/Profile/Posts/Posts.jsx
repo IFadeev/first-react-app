@@ -11,7 +11,6 @@ let newPostText = React.createRef();
 
 let addPost = () => {
   props.addPost();
-  newPostText.current.value = '';
   props.updatePostTextarea('');
 }
 
