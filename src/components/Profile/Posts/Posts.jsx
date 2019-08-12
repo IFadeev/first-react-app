@@ -10,17 +10,22 @@ let postElemets = props.postData.map( post => <Post name = {post.fullName} date 
 let newPostText = React.createRef();
 
 let addPost = () => {
-  
-  let text = newPostText.current.value;
-  text ? props.addPost(text) : alert('Пустое значение!');
+  props.addPost();
   newPostText.current.value = '';
+  props.updatePostTextarea('');
 }
 
+let updatePostTextarea = () => {
+  let text = newPostText.current.value;
+  props.updatePostTextarea(text);
+}
+
+debugger;
   return(
     <div className={posts.wall}>
       <div className={posts.upload}>
         <div className={posts.wall__field }>
-          <textarea ref={newPostText} className={posts.field} placeholder="What's up?" columns="5" rows="2"></textarea>
+          <textarea onChange = {updatePostTextarea} value = {props.currentPostData.message} ref={newPostText} className={posts.field} placeholder="What's up?" columns="5" rows="2"></textarea>
         </div>
         <button onClick = { (addPost) }>Post</button>
       </div>

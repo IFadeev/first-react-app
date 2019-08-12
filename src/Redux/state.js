@@ -33,7 +33,11 @@ let state = {
         message: 'I learning REACT!!',
         date: '04.08.19',
       },
-    ]
+    ],
+    currentPostData: 
+      {
+        message: ''
+      }
   },
   
   dialogPage: {
@@ -97,9 +101,9 @@ let state = {
       }
     }
   ],  
-},
+  },
 
-frinedsPage: [
+  frinedsPage: [
     { id: 1, 
       name: 'Dmitriy',
       surname: 'Menshikov',
@@ -131,9 +135,8 @@ frinedsPage: [
   ]
 }
 
-export let addPost = (postMessage) => {
-  //let nowDate = new Date();
-    
+export let addPost = () => {
+  //let nowDate = new Date();   
   let newPost = { 
     id: 5,
     name: 'Ivan',
@@ -141,11 +144,18 @@ export let addPost = (postMessage) => {
     get fullName(){
       return `${this.name} ${this.surname}`
   },
-    message: postMessage,
+    message: state.profilePage.currentPostData.message,
     date: '08.11.19'
 };
   state.profilePage.postData.push(newPost);
   rerendreEntireTree(state);
 }
+
+export let updatePostTextarea = (currentPostmessage) => {
+  state.profilePage.currentPostData.message = currentPostmessage;
+  rerendreEntireTree(state);
+}
+
+window.state = state;
 
 export default state;

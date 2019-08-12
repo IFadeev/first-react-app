@@ -42,7 +42,9 @@ const Profileinfo = (props) => {
         </div>
 
         <Posts postData = {props.postData}
-               addPost = {props.addPost}/>
+               addPost = {props.addPost}
+               currentPostData = {props.currentPostData}
+               updatePostTextarea = {props.updatePostTextarea}/>
       </div>
       {/* <Profile/> */}
     </div>
