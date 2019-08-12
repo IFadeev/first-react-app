@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import App from './App';
 
-import { addPost, updatePostTextarea } from './Redux/state';
+import { addPost, updatePostTextarea, addMessage } from './Redux/state';
 
 export let rerendreEntireTree = (state) => {
   ReactDOM.render(<App appState = {state} 
                         addPost = {addPost}
-                        updatePostTextarea = {updatePostTextarea} />, 
+                        updatePostTextarea = {updatePostTextarea} 
+                        addMessage = {addMessage}/>, 
                         document.getElementById('root'));
 
 }

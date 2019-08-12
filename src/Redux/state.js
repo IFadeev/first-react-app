@@ -157,6 +157,22 @@ export let updatePostTextarea = (currentPostmessage) => {
   rerendreEntireTree(state);
 }
 
-window.state = state;
+export let addMessage = (Message) => {
+  let newMessage = {
+    id: 5, 
+    name: 'Ivan',
+    surname: 'Fadeev',
+    message: Message,
+    get fullName(){
+      return `${this.name} ${this.surname}`
+      }
+    };
+
+    state.dialogPage.messagesData.push(newMessage);
+    rerendreEntireTree(state);
+  }
+
+
+
 
 export default state;
