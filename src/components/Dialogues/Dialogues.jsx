@@ -20,7 +20,7 @@ const Dialogues = (props) => {
   отправляет данные в state.js*/
   let updateMessage = () => {
     let text = newMessage.current.value;
-    
+    props.updateMessage(text);
   }
 
 
@@ -40,8 +40,8 @@ const Dialogues = (props) => {
         </div>
 
         <div className={dialog.textareaFild}>
-            <textarea onChange ={} ref={newMessage}  placeholder="Write here a message.."></textarea>
-            <button onClick ={ sendMessage} >Send</button>
+            <textarea onChange ={updateMessage} value ={props.dialogPage.currentMessage.message} ref={newMessage}  placeholder="Write here a message.."></textarea>
+            <button onClick ={ sendMessage } >Send</button>
         </div>
 
       </div>

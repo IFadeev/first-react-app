@@ -67,6 +67,9 @@ let state = {
       }
     },
   ],
+    currentMessage: {
+      message: '',
+    },
     chatsData: [
     { id: 1, 
       name: 'Ivan',
@@ -169,10 +172,18 @@ export let addMessage = (Message) => {
     };
 
     state.dialogPage.messagesData.push(newMessage);
+    state.dialogPage.currentMessage.message = '';
     rerendreEntireTree(state);
   }
 
 
+  export let updateMessage = (currentMessageData) => {
+    state.dialogPage.currentMessage.message = currentMessageData;
+    rerendreEntireTree(state);
+    }
+
 
 
 export default state;
+
+window.state = state;

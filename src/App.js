@@ -29,7 +29,8 @@ const App = (props) => {
                  updatePostTextarea = {props.updatePostTextarea} /> }/>
           <Route path ='/Dialogues' render = { () => <Dialogues 
                  dialogPage = {props.appState.dialogPage}
-                 addMessage = {props.addMessage}/> } />
+                 addMessage = {props.addMessage}
+                 updateMessage = {props.updateMessage}/> } />
           <Route path = '/Friends' render =  { () => <Friends 
                  dialogPage = {props.appState.frinedsPage}
                   /> } />
