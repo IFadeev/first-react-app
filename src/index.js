@@ -1,13 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import * as serviceWorker from './serviceWorker';
 import App from './App';
 
-import * as serviceWorker from './serviceWorker';
-import state from './Redux/state';
+import state, {subscribe} from './Redux/state'
+import './index.css';
 
-import { rerendreEntireTree } from './render';
+import { addPost, updatePostTextarea, addMessage, updateMessage } from './Redux/state';
 
-rerendreEntireTree(state);
+let rerendreEntireTree = () => {
+  ReactDOM.render(<App appState = {state} 
+                        addPost = {addPost}
+                        updatePostTextarea = {updatePostTextarea} 
+                        addMessage = {addMessage}
+                        updateMessage = {updateMessage}/>, 
+                        document.getElementById('root'));
+  }
 
+  rerendreEntireTree(state);
+
+  subscribe(rerendreEntireTree);
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
