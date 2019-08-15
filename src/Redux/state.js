@@ -137,7 +137,7 @@ let store = {
       }
     ]
   },
-  getState() {
+  get getState() {
     return this._state;
   },
   _callSubscriber() {
@@ -185,6 +185,5 @@ let store = {
     this._callSubscriber = observer;
   } 
 }
-
 
 export default store;

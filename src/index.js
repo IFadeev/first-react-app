@@ -7,7 +7,7 @@ import store from './Redux/state';
 import './index.css';
 
 let rerendreEntireTree = () => {
-  ReactDOM.render(<App appState = {store.getState()} 
+  ReactDOM.render(<App appState = {store.getState} 
                         addPost = {store.addPost.bind(store)}
                         updatePostTextarea = {store.updatePostTextarea.bind(store)} 
                         addMessage = {store.addMessage.bind(store)}
