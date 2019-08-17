@@ -7,24 +7,29 @@ import {sendMessageActionCreator, updateMessageActionCreator} from '../../Redux/
 
 const Dialogues = (props) => {
 
-  let mssageElement = props.dialogPage.messagesData.map( dialog => <Message fullName ={dialog.fullName} text={dialog.message}/>);
+  let mssageElement = props.dialogPage.messagesData.map( dialog => 
+  <Message 
+    fullName ={dialog.fullName} 
+    text={dialog.message}/>);
 
-  let chatsDataElements = props.dialogPage.chatsData.map( dialog => <DialogueItem fullName={dialog.fullName} text={dialog.message} id={dialog.id}/>); 
+  let chatsDataElements = props.dialogPage.chatsData.map( dialog => 
+  <DialogueItem 
+    fullName={dialog.fullName} 
+    text={dialog.message} 
+    id={dialog.id}/>); 
+    
 
-  let newMessage = React.createRef();
-
-  let sendMessage = () => {
-    let message = newMessage.current.value;
+  let sendMessage = (event) => {
+    let message = event.target.value;
     props.dispatch(sendMessageActionCreator(message));
   }
 
   /*Функция реагирует на изменение в поле ввода сообщения и 
   отправляет данные в state.js*/
-  let updateMessage = () => {
-    let message = newMessage.current.value;
+  let updateMessage = (event) => {
+    let message = event.target.value;
     props.dispatch(updateMessageActionCreator(message));
   }
-
 
   return (
     <div className={dialog.wrapper}>
@@ -42,7 +47,7 @@ const Dialogues = (props) => {
         </div>
 
         <div className={dialog.textareaFild}>
-            <textarea onChange ={updateMessage} value ={props.dialogPage.currentMessage.message} ref={newMessage}  placeholder="Write here a message.."></textarea>
+            <textarea onChange = { updateMessage } value ={props.dialogPage.currentMessage.message} placeholder="Write here a message.."></textarea>
             <button onClick ={ sendMessage } >Send</button>
         </div>
 

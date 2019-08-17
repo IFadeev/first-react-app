@@ -160,7 +160,7 @@ let store = {
       message: this._state.profilePage.currentPostData.message,
       date: '08.11.19'
   };
-    this._state.profilePage.postData.push(newPost);
+    this._state.profilePage.postData.unshift(newPost);
     this._state.profilePage.currentPostData.message = '';
     this._callSubscriber(this._state);
   },
@@ -169,12 +169,13 @@ let store = {
     this._state.profilePage.currentPostData.message = currentPostmessage;
     this._callSubscriber(this._state);
   },
-  _addMessage(message) {
+  _addMessage() {
+    
     let newMessage = {
       id: 5, 
       name: 'Ivan',
       surname: 'Fadeev',
-      message: message,
+      message: this._state.dialogPage.currentMessage.message,
       get fullName(){
         return `${this.name} ${this.surname}`
         }
@@ -198,7 +199,7 @@ let store = {
       break;
       case 'UPDATE-NEW-POST': this._updatePostTextarea(action.text)
       break;
-      case 'SEND-MESSAGE': this._addMessage(action.message);
+      case 'SEND-MESSAGE': this._addMessage();
       break;
       case 'UPDATE-NEW-MESSAGE': this._updateMessage(action.message)
    
