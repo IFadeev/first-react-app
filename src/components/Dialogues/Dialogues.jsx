@@ -13,14 +13,22 @@ const Dialogues = (props) => {
 
   let sendMessage = () => {
     let text = newMessage.current.value;
-    props.addMessage(text);
+    let action = {
+      type: 'SEND-MESSAGE',
+      message: text
+    }
+    props.dispatch(action);
   }
 
   /*Функция реагирует на изменение в поле ввода сообщения и 
   отправляет данные в state.js*/
   let updateMessage = () => {
     let text = newMessage.current.value;
-    props.updateMessage(text);
+    let action = {
+      type: 'UPDATE-NEW-MESSAGE',
+      message: text
+    }
+    props.dispatch(action);
   }
 
 

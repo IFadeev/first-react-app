@@ -8,11 +8,8 @@ import './index.css';
 
 let rerendreEntireTree = () => {
   ReactDOM.render(<App appState = {store.getState} 
-                        addPost = {store.addPost.bind(store)}
-                        updatePostTextarea = {store.updatePostTextarea.bind(store)} 
-                        addMessage = {store.addMessage.bind(store)}
-                        updateMessage = {store.updateMessage.bind(store)}/>, 
-                        document.getElementById('root'));
+                       dispatch = {store.dispatch.bind(store)}/>, 
+                       document.getElementById('root'));
   }
 
   rerendreEntireTree();

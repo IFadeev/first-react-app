@@ -25,12 +25,10 @@ const App = (props) => {
           <Route path ='/Profile' render = { () => <Profile 
                  profilePage = {props.appState.profilePage} 
                  frinedsPage = {props.appState.frinedsPage}
-                 addPost = {props.addPost}  
-                 updatePostTextarea = {props.updatePostTextarea} /> }/>
+                 dispatch = {props.dispatch} /> }/>
           <Route path ='/Dialogues' render = { () => <Dialogues 
                  dialogPage = {props.appState.dialogPage}
-                 addMessage = {props.addMessage}
-                 updateMessage = {props.updateMessage}/> } />
+                 dispatch = {props.dispatch} /> } />
           <Route path = '/Friends' render =  { () => <Friends 
                  dialogPage = {props.appState.frinedsPage}
                   /> } />

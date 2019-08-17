@@ -6,20 +6,26 @@ const Posts = (props) => {
 
 let postElemets = props.postData.map( post => <Post name = {post.fullName} date = {post.date} message ={post.message}/>);
 
-
 let newPostText = React.createRef();
 
+
 let addPost = () => {
-  props.addPost();
-  props.updatePostTextarea('');
+  let action = {
+    type: 'ADD-POST',
+  }
+  props.dispatch(action);
+  //props.updatePostTextarea('');
 }
 
 let updatePostTextarea = () => {
   let text = newPostText.current.value;
-  props.updatePostTextarea(text);
+  let action = {
+    type: 'UPDATE-NEW-POST',
+    text: text
+  }
+  props.dispatch(action);
 }
 
-debugger;
   return(
     <div className={posts.wall}>
       <div className={posts.upload}>

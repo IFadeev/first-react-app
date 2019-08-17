@@ -137,12 +137,13 @@ let store = {
       }
     ]
   },
+  _callSubscriber() {
+  },
+
   get getState() {
     return this._state;
   },
-  _callSubscriber() {
-  },
-  addPost() {
+  _addPost() {
     //let nowDate = new Date();   
     let newPost = { 
       id: 5,
@@ -158,16 +159,17 @@ let store = {
     this._state.profilePage.currentPostData.message = '';
     this._callSubscriber(this._state);
   },
-  updatePostTextarea(currentPostmessage) {
+  
+  _updatePostTextarea(currentPostmessage) {
     this._state.profilePage.currentPostData.message = currentPostmessage;
     this._callSubscriber(this._state);
   },
-  addMessage(Message) {
+  _addMessage(message) {
     let newMessage = {
       id: 5, 
       name: 'Ivan',
       surname: 'Fadeev',
-      message: Message,
+      message: message,
       get fullName(){
         return `${this.name} ${this.surname}`
         }
@@ -177,13 +179,27 @@ let store = {
       this._state.dialogPage.currentMessage.message = '';
       this._callSubscriber(this._state);
   },
-  updateMessage(currentMessageData) {
+  _updateMessage(currentMessageData) {
     this._state.dialogPage.currentMessage.message = currentMessageData;
     this._callSubscriber(this._state);
   },
   subscribe(observer) {
     this._callSubscriber = observer;
-  } 
+  },
+
+  dispatch(action) {
+    switch(action.type) {
+      case 'ADD-POST': this._addPost();
+      break;
+      case 'UPDATE-NEW-POST': this._updatePostTextarea(action.text)
+      break;
+      case 'SEND-MESSAGE': this._addMessage(action.message);
+      break;
+      case 'UPDATE-NEW-MESSAGE': this._updateMessage(action.message)
+   
+    }
+  },
 }
 
+window.store = store;
 export default store;

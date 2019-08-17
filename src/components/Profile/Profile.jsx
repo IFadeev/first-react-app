@@ -12,10 +12,8 @@ const Profile = (props) => {
 
               <Profileinfo friendsData = {props.frinedsPage} 
                            postData = {props.profilePage.postData} 
-                           addPost = {props.addPost}
                            currentPostData = {props.profilePage.currentPostData}
-                           updatePostTextarea = {props.updatePostTextarea}/>
-
+                           dispatch = {props.dispatch}/>
             {/*} <Friends/> */}
     </section>
   );
