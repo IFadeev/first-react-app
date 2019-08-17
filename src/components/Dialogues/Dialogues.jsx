@@ -2,6 +2,8 @@ import React from 'react';
 import dialog from './Dialogues.module.css';
 import DialogueItem from './DialogueItem/DialogueItem';
 import Message from './Message/Message';
+import {sendMessageActionCreator, updateMessageActionCreator} from '../../Redux/state';
+
 
 const Dialogues = (props) => {
 
@@ -12,23 +14,15 @@ const Dialogues = (props) => {
   let newMessage = React.createRef();
 
   let sendMessage = () => {
-    let text = newMessage.current.value;
-    let action = {
-      type: 'SEND-MESSAGE',
-      message: text
-    }
-    props.dispatch(action);
+    let message = newMessage.current.value;
+    props.dispatch(sendMessageActionCreator(message));
   }
 
   /*Функция реагирует на изменение в поле ввода сообщения и 
   отправляет данные в state.js*/
   let updateMessage = () => {
-    let text = newMessage.current.value;
-    let action = {
-      type: 'UPDATE-NEW-MESSAGE',
-      message: text
-    }
-    props.dispatch(action);
+    let message = newMessage.current.value;
+    props.dispatch(updateMessageActionCreator(message));
   }
 
 
