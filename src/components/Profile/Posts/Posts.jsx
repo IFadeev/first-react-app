@@ -26,7 +26,7 @@ let updatePostTextarea = (event) => {
           value = {props.currentPostData.message} 
          className={posts.field} placeholder="What's up?" columns="5" rows="2"></textarea>
         </div>
-        <button onClick = { (addPost) }>Post</button>
+        <button onClick = { addPost }>Post</button>
       </div>
 
       {postElemets}

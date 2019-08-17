@@ -1,8 +1,10 @@
+import profileReducer from './profile-reducer';
+import dialoguesReducer from './dialogues-reducer';
+
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST = 'UPDATE-NEW-POST';
 const SEND_MESSAGE = 'SEND-MESSAGE';
 const UPDATE_NEW_MESSAGE = 'UPDATE-NEW-MESSAGE';
-
 
 let store = {
   _state : {
@@ -148,27 +150,8 @@ let store = {
   get getState() {
     return this._state;
   },
-  _addPost() {
-    //let nowDate = new Date();   
-    let newPost = { 
-      id: 5,
-      name: 'Ivan',
-      surname: 'Fadeev',
-      get fullName(){
-        return `${this.name} ${this.surname}`
-    },
-      message: this._state.profilePage.currentPostData.message,
-      date: '08.11.19'
-  };
-    this._state.profilePage.postData.unshift(newPost);
-    this._state.profilePage.currentPostData.message = '';
-    this._callSubscriber(this._state);
-  },
+
   
-  _updatePostTextarea(currentPostmessage) {
-    this._state.profilePage.currentPostData.message = currentPostmessage;
-    this._callSubscriber(this._state);
-  },
   _addMessage() {
     
     let newMessage = {
@@ -194,11 +177,10 @@ let store = {
   },
 
   dispatch(action) {
+    profileReducer(this._state.profilePage, action);
+    this._callSubscriber(this._state);
+    
     switch(action.type) {
-      case 'ADD-POST': this._addPost();
-      break;
-      case 'UPDATE-NEW-POST': this._updatePostTextarea(action.text)
-      break;
       case 'SEND-MESSAGE': this._addMessage();
       break;
       case 'UPDATE-NEW-MESSAGE': this._updateMessage(action.message)
