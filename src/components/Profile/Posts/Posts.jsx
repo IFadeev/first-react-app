@@ -9,6 +9,7 @@ let postElemets = props.postData.map( post => <Post name = {post.fullName} date 
 
 
 let addPost = () => {
+  
   props.dispatch(addPostActionCreator());
   //props.updatePostTextarea('');
 }

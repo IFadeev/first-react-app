@@ -12,11 +12,12 @@ const profileReducer = (state, action) => {
       get fullName(){
         return `${this.name} ${this.surname}`
     },
-      message: action.text,
+      message: state.currentPostData.message,
       date: '08.11.19'
   };
     state.postData.unshift(newPost);
     state.currentPostData.message = '';
+    
   }
 
   else if (action.type === UPDATE_NEW_POST) {

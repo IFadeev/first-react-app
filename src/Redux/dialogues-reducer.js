@@ -7,17 +7,17 @@ const dialoguesReducer = (state, action) => {
       id: 5, 
       name: 'Ivan',
       surname: 'Fadeev',
-      message: this._state.dialogPage.currentMessage.message,
+      message: state.currentMessage.message,
       get fullName(){
         return `${this.name} ${this.surname}`
         }
       };
 
-      state.dialogPage.messagesData.push(newMessage);
-      state.dialogPage.currentMessage.message = '';
+      state.messagesData.push(newMessage);
+      state.currentMessage.message = '';
   }
   else if (action.type === UPDATE_NEW_MESSAGE) {
-    state.dialogPage.currentMessage.message = action.message;
+    state.currentMessage.message = action.message;
   }
 
   return state

@@ -151,42 +151,17 @@ let store = {
     return this._state;
   },
 
-  
-  _addMessage() {
-    
-    let newMessage = {
-      id: 5, 
-      name: 'Ivan',
-      surname: 'Fadeev',
-      message: this._state.dialogPage.currentMessage.message,
-      get fullName(){
-        return `${this.name} ${this.surname}`
-        }
-      };
-  
-      this._state.dialogPage.messagesData.push(newMessage);
-      this._state.dialogPage.currentMessage.message = '';
-      this._callSubscriber(this._state);
-  },
-  _updateMessage(currentMessageData) {
-    this._state.dialogPage.currentMessage.message = currentMessageData;
-    this._callSubscriber(this._state);
-  },
   subscribe(observer) {
     this._callSubscriber = observer;
   },
 
   dispatch(action) {
-    profileReducer(this._state.profilePage, action);
+    
+    this._state.profilePage = profileReducer(this._state.profilePage, action);
+    this._state.dialogPage = dialoguesReducer(this._state.dialogPage, action);
     this._callSubscriber(this._state);
     
-    switch(action.type) {
-      case 'SEND-MESSAGE': this._addMessage();
-      break;
-      case 'UPDATE-NEW-MESSAGE': this._updateMessage(action.message)
-   
-    }
-  },
+  }
 }
 
 export const addPostActionCreator = () => ({type: ADD_POST})
