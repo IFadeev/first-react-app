@@ -1,7 +1,46 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST = 'UPDATE-NEW-POST';
 
-const profileReducer = (state, action) => {
+let initialState = {
+  postData: [
+    {
+      id: 1,
+      name: 'Ivan',
+      surname: 'Fadeev',
+      get fullName(){
+        return `${this.name} ${this.surname}`
+      },
+      message: 'Hello, world!',
+      date: '04.08.19'
+    },
+    {
+    id: 2,
+      name: 'Ivan',
+      surname: 'Fadeev',
+      get fullName(){
+        return `${this.name} ${this.surname}`
+      },
+      message: 'Another one!',
+      date: '04.08.19',
+    },
+    {
+      id: 3,
+      name: 'Ivan',
+      surname: 'Fadeev',
+      get fullName(){
+        return `${this.name} ${this.surname}`
+      },
+      message: 'I learning REACT!!',
+      date: '04.08.19',
+    },
+  ],
+  currentPostData: 
+    {
+      message: ''
+    }
+}
+
+const profileReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_POST: 
       let newPost = { 

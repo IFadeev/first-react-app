@@ -4,7 +4,7 @@ import FriendsProfile from '../FriendsProfile/FriendsProfile';
 import Posts from '../Posts/Posts';
 
 const Profileinfo = (props) => {
-  return (
+    return (
     <div className={profile.profile}>
 
       <div className={profile.leftColumn}>

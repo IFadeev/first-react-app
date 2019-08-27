@@ -4,9 +4,7 @@ import { NavLink } from 'react-router-dom';
 import friendsItem from './FriendsProfile.module.css';
 
 const FriendsProfile = (props) => {
-
-let frindsElement = props.frinedsData.
-map( frined => <FriendsProfileItem name={frined.name} />);
+let frindsElement = props.frinedsData.map( frined => <FriendsProfileItem name={frined.name} />);
 
   return (
 

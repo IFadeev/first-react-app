@@ -5,11 +5,8 @@ import Profileinfo from './Profileinfo/Profileinfo';
 import Friends from '../Friends/Friends';
 
 const Profile = (props) => {
-
- 
   return (
     <section className={profile.content}>
-
               <Profileinfo friendsData = {props.frinedsPage} 
                            postData = {props.profilePage.postData} 
                            currentPostData = {props.profilePage.currentPostData}
@@ -18,5 +15,4 @@ const Profile = (props) => {
     </section>
   );
 }
-
 export default Profile;

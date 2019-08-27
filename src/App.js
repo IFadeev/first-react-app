@@ -12,7 +12,7 @@ import Settings from './components/Settings/Settings';
 
 
 const App = (props) => {
-  
+
   return (
     <BrowserRouter>
       <div className = { maincss.App }>
@@ -24,7 +24,7 @@ const App = (props) => {
           
           <Route path ='/Profile' render = { () => <Profile 
                  profilePage = {props.appState.profilePage} 
-                 frinedsPage = {props.appState.frinedsPage}
+                 frinedsPage = {props.appState.frinedsPage.frinedsPage}
                  dispatch = {props.dispatch} /> }/>
           <Route path ='/Dialogues' render = { () => <Dialogues 
                  dialogPage = {props.appState.dialogPage}
