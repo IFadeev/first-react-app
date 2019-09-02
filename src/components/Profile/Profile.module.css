@@ -32,15 +32,57 @@
   border: 1px solid #000;
 }
 
-.img {
-  position: absolute;
-  top: 0;
-  left: 0px;
-  width: 50%;
-}
 
 .info {
   margin-left: 300px;
 }
 
+
+.imgUpload {
+  display: block;
+  max-width: 280px;
+  margin: 10px;
+  margin: 0 auto;
+}
+
+.img {
+  position: relative;
+  top: 0;
+  left: 20px;
+  width: 85%;
+}
+
+
+.info {
+  margin-left: 10px;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.friendsColumn {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  max-width: 250px;
+  margin: 10px;
+  background-color: #fff; 
+}
+.friendsColumn__frined {
+  padding: 10px;
+}
+
+.friendsColumn__img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #9EA3CF;
+}
+
+.rightColumn {
+  margin: auto;
+}
 

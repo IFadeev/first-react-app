@@ -1,7 +1,7 @@
 import React from 'react';
 import profile from './Profileinfo.module.css'
 import FriendsProfile from '../FriendsProfile/FriendsProfile';
-import Posts from '../Posts/Posts';
+import PostsContainer from '../Posts/PostsContainer';
 
 const Profileinfo = (props) => {
     return (
@@ -41,9 +41,9 @@ const Profileinfo = (props) => {
           </div>
         </div>
 
-        <Posts postData = {props.postData}
-               dispatch = {props.dispatch}
-               currentPostData = {props.currentPostData}/>
+        <PostsContainer postData = {props.postData}
+                        dispatch = {props.dispatch}
+                 currentPostData = {props.currentPostData}/>
       </div>
       {/* <Profile/> */}
     </div>

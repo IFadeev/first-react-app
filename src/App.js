@@ -30,7 +30,7 @@ const App = (props) => {
                  dialogPage = {props.appState.dialogPage}
                  dispatch = {props.dispatch} /> } />
           <Route path = '/Friends' render =  { () => <Friends 
-                 dialogPage = {props.appState.frinedsPage}
+                 frinedsPage = {props.appState.frinedsPage}
                   /> } />
           <Route path ='/News' render = { News }/>
           <Route path ='/Music' render = { Music }/>

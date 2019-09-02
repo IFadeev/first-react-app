@@ -1,22 +1,17 @@
 import React from 'react';
 import posts from './Posts.module.css';
 import Post from './Post/Post';
-import {addPostActionCreator, updatePosActionCreator} from '../../../Redux/profile-reducer';
 
 const Posts = (props) => {
 
 let postElemets = props.postData.map( post => <Post name = {post.fullName} date = {post.date} message ={post.message}/>);
 
-
 let addPost = () => {
-  
-  props.dispatch(addPostActionCreator());
-  //props.updatePostTextarea('');
+  props.onAddPost();
 }
 
 let updatePostTextarea = (event) => {
-  let postText = event.target.value;
-  props.dispatch(updatePosActionCreator(postText));
+  props.onPostChange(event.target.value);
 }
 
   return(

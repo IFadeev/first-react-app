@@ -6,8 +6,7 @@ import FriendsItem from './FriendsItem/FriendsItem';
 
 const Friends = (props) => {
 
-let frindsElement = props.dialogPage.
-map( frined => <FriendsItem fullName={frined.fullName} />);
+let frindsElement = props.frinedsPage.map( frined => <FriendsItem fullName={frined.fullName} />);
 
   return (
 
