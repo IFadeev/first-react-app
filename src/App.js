@@ -22,7 +22,8 @@ const App = (props) => {
 
           <Menu />
           
-          <Route path ='/Profile' render = { () => <Profile 
+          <Route path ='/Profile' render = { () => <Profile
+                 store = {props.store} 
                  profilePage = {props.appState.profilePage} 
                  frinedsPage = {props.appState.frinedsPage.frinedsPage}
                  dispatch = {props.dispatch} /> }/>

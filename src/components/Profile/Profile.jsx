@@ -42,9 +42,8 @@ const Profile = (props) => {
             </div>
           </div>
 
-          <PostsContainer postData = {props.profilePage.postData}
-                          dispatch = {props.dispatch}
-                  currentPostData = {props.profilePage.currentPostData}/>
+          <PostsContainer store = {props.store}
+                          dispatch = {props.dispatch} />
         </div>
         {/* <Profile/> */}
         </div>

@@ -5,21 +5,24 @@ import Posts from './Posts';
 
 const PostsContainer = (props) => {
 
-let onAddPost = () => {
-  props.dispatch(addPostActionCreator());
-}
+  let state = props.store.getState().profilePage;
 
-let onPostChange = (postText) => {
-  let action = updatePosActionCreator(postText);
-  props.dispatch(action);
+  let onAddPost = () => {
+    props.dispatch(addPostActionCreator());
+  }
 
-}
+  let onPostChange = (postText) => {
+    let action = updatePosActionCreator(postText);
+    props.dispatch(action);
+
+  }
 
   return(
     <Posts onAddPost       = {onAddPost} 
            onPostChange    = {onPostChange}
-           postData        = {props.postData}
-           currentPostData = {props.currentPostData}
+        
+           postData        = {state.postData}
+           currentPostData = {state.currentPostData}
            
            />
   );
