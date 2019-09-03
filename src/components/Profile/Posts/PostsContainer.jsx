@@ -8,12 +8,12 @@ const PostsContainer = (props) => {
   let state = props.store.getState().profilePage;
 
   let onAddPost = () => {
-    props.dispatch(addPostActionCreator());
+    props.store.dispatch(addPostActionCreator());
   }
 
   let onPostChange = (postText) => {
     let action = updatePosActionCreator(postText);
-    props.dispatch(action);
+    props.store.dispatch(action);
 
   }
 
