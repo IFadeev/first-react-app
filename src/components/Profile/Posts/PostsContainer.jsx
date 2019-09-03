@@ -18,11 +18,10 @@ const PostsContainer = (props) => {
   }
 
   return(
-    <Posts onAddPost       = {onAddPost} 
-           onPostChange    = {onPostChange}
-        
-           postData        = {state.postData}
-           currentPostData = {state.currentPostData}
+    <Posts onPostChange = {onPostChange}
+              onAddPost = {onAddPost} 
+              postData  = {state.postData}
+        currentPostData = {state.currentPostData}
            
            />
   );

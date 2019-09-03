@@ -6,6 +6,7 @@ import PostsContainer from './Posts/PostsContainer';
 
 
 const Profile = (props) => {
+  
   return (
     <section className={profile.content}>
       <div className={profile.profile}>
@@ -14,8 +15,8 @@ const Profile = (props) => {
           <div className={profile.imgUpload}>
             <img className={profile.img} src={require("../../vk.jpg")}></img>
           </div>
-
-          <FriendsProfile frinedsData = {props.frinedsPage}/>
+          
+          <FriendsProfile frinedsData = {props.frinedsPage.frinedsPage}/>
 
         </div>
 
