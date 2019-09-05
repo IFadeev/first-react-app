@@ -2,7 +2,7 @@ const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST = 'UPDATE-NEW-POST';
 
 let initialState = {
-  frinedsPage : [
+  frinedsData : [
     { id: 1, 
       name: 'Dmitriy',
       surname: 'Menshikov',

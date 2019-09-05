@@ -7,11 +7,11 @@ import {sendMessageActionCreator, updateMessageActionCreator} from '../../Redux/
 
 const Dialogues = (props) => {
 
-  let mssageElement = props.messagesData.map( dialog => 
+  let mssageElement = props.dialogPage.messagesData.map( dialog => 
   <Message fullName = {dialog.fullName} 
                text = {dialog.message}/>);
 
-  let chatsDataElements = props.chatsData.map( dialog => 
+  let chatsDataElements = props.dialogPage.chatsData.map( dialog => 
   <DialogueItem fullName = {dialog.fullName} 
                     text = {dialog.message} 
                       id = {dialog.id}/>); 
@@ -45,7 +45,7 @@ const Dialogues = (props) => {
         </div>
 
         <div className={dialog.textareaFild}>
-            <textarea onChange = { updateMessage } value ={props.currentMessage.message} placeholder="Write here a message.."></textarea>
+            <textarea onChange = { updateMessage } value ={props.dialogPage.currentMessage.message} placeholder="Write here a message.."></textarea>
             <button onClick ={ sendMessage } >Send</button>
         </div>
 

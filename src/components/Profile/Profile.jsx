@@ -1,15 +1,12 @@
 import React from 'react';
 import profile from './Profile.module.css'
-import FriendsProfile from './FriendsProfile/FriendsProfile';
 import PostsContainer from './Posts/PostsContainer';
-import StoreContext from '../../StoreContext';
+import FriendsProfileContainer from './FriendsProfile/FriendsProfileContainer';
 
 
 const Profile = (props) => {
   
   return (
-    <StoreContext.Consumer>
-      { (store) => (
         <section className={profile.content}>
           <div className={profile.profile}>
             <div className={profile.leftColumn}>
@@ -17,9 +14,9 @@ const Profile = (props) => {
               <div className={profile.imgUpload}>
                 <img className={profile.img} src={require("../../vk.jpg")}></img>
               </div>
-              
-              <FriendsProfile frinedsData = {store.getState().frinedsPage.frinedsPage}/>
 
+               <FriendsProfileContainer/> {/*frinedsData = {store.getState().frinedsPage.frinedsPage}/> */}
+ */} 
             </div>
 
 
@@ -45,15 +42,14 @@ const Profile = (props) => {
                 </div>
               </div>
 
-              <PostsContainer store = {store} />
+              <PostsContainer />
             </div>
             {/* <Profile/> */}
             </div>
 
         </section>
-      )
-      } 
-    </StoreContext.Consumer>
   );
 }
+
+
 export default Profile;

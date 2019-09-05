@@ -12,26 +12,18 @@ import Settings from './components/Settings/Settings';
 import DialoguesContainer from './components/Dialogues/DialoguesContainer';
 
 
-const App = (props) => {
+const App = () => {
   return (
-
       <div className = { maincss.App }>
-
         <Header />
         <div className = { maincss.container }>
-
           <Menu />
-          
-          <Route path ='/Profile' render = { () => <Profile/> }/>
+          <Route path ='/Profile' render = { () => <Profile /> }/>
           <Route path ='/Dialogues' render = { () => <DialoguesContainer/> } />
-
           <Route path = '/Friends' render =  { () => <Friends /> } />
-
           <Route path ='/News' render = { News }/>
           <Route path ='/Music' render = { Music }/>
           <Route path = '/Settings' render = { Settings }/>
-          
-
         </div>
 
         {/* END -- <App/> -- */}

@@ -4,7 +4,7 @@ import Post from './Post/Post';
 
 const Posts = (props) => {
 
-let postElemets = props.postData.map( post => <Post name = {post.fullName} date = {post.date} message ={post.message}/>);
+let postElemets = props.profilePage.postData.map( post => <Post name = {post.fullName} date = {post.date} message ={post.message}/>);
 
 let addPost = () => {
   props.onAddPost();
@@ -19,7 +19,7 @@ let updatePostTextarea = (event) => {
       <div className={posts.upload}>
         <div className={posts.wall__field }>
           <textarea onChange = {updatePostTextarea} 
-          value = {props.currentPostData.message} 
+          value = {props.profilePage.currentPostData.message} 
          className={posts.field} placeholder="What's up?" columns="5" rows="2"></textarea>
         </div>
         <button onClick = { addPost }>Post</button>
