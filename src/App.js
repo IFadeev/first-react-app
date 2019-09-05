@@ -4,12 +4,12 @@ import Header from './components/Header/Header';
 import Menu from './components/Menu/Menu';
 import Profile from './components/Profile/Profile';
 
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import News from './components/News/News';
 import Music from './components/Music/Music';
-import Friends from './components/Friends/Friends';
 import Settings from './components/Settings/Settings';
 import DialoguesContainer from './components/Dialogues/DialoguesContainer';
+import FriendsContainer from './components/Friends/FriendsContainer';
 
 
 const App = () => {
@@ -20,7 +20,7 @@ const App = () => {
           <Menu />
           <Route path ='/Profile' render = { () => <Profile /> }/>
           <Route path ='/Dialogues' render = { () => <DialoguesContainer/> } />
-          <Route path = '/Friends' render =  { () => <Friends /> } />
+          <Route path = '/Friends' render =  { () => <FriendsContainer /> } />
           <Route path ='/News' render = { News }/>
           <Route path ='/Music' render = { Music }/>
           <Route path = '/Settings' render = { Settings }/>
