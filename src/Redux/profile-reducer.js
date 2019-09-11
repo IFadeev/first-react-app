@@ -41,6 +41,7 @@ let initialState = {
 }
 
 const profileReducer = (state = initialState, action) => {
+  
   switch (action.type) {
     case ADD_POST: 
       let newPost = { 
@@ -53,14 +54,21 @@ const profileReducer = (state = initialState, action) => {
         message: state.currentPostData.message,
         date: '08.11.19'
     };
-      state.postData.unshift(newPost);
-      state.currentPostData.message = '';
-      return state
-    case UPDATE_NEW_POST: 
-      state.currentPostData.message = action.text;
-      return state
+      return {
+        ...state,
+        postData: [newPost, ...state.postData],
+        currentPostData: {message: ''}
+      }
+
+    case UPDATE_NEW_POST: { 
+          return {
+            ...state,
+            currentPostData: {message: action.text}
+      }
+    }
+
     default: 
-      return state
+      return state;
   }
 }
 

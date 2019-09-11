@@ -1,3 +1,5 @@
+import { stat } from "fs";
+
 const SEND_MESSAGE = 'SEND-MESSAGE';
 const UPDATE_NEW_MESSAGE = 'UPDATE-NEW-MESSAGE';
 
@@ -69,7 +71,7 @@ let initialState = {
 
 const dialoguesReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SEND_MESSAGE:     
+    case SEND_MESSAGE:    
       let newMessage = {
         id: 5, 
         name: 'Ivan',
@@ -79,12 +81,19 @@ const dialoguesReducer = (state = initialState, action) => {
           return `${this.name} ${this.surname}`
           }
         };
-        state.messagesData.push(newMessage);
-        state.currentMessage.message = '';
-        return state
-    case UPDATE_NEW_MESSAGE:
-      state.currentMessage.message = action.message;
-      return state
+        return {
+          ...state,
+          messagesData: [newMessage, ...state.messagesData],
+          currentMessage: {message: ''}
+        }
+      
+    case UPDATE_NEW_MESSAGE: 
+      return {
+        ...state,
+        currentMessage: {...state.currentMessage},
+        currentMessage: {message: action.message}
+      }
+    
     default: 
       return state
   }  

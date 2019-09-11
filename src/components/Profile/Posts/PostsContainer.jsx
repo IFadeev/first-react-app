@@ -4,13 +4,13 @@ import Posts from './Posts';
 import { connect } from 'react-redux';
 
 
-let mapStateToProps = (state) => {
+const mapStateToProps = (state) => {
   return {
     profilePage: state.profilePage
   }
 }
 
-let mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
   return {
     onAddPost: () => {
       dispatch(addPostActionCreator());
@@ -25,3 +25,5 @@ const PostsContainer = connect(mapStateToProps, mapDispatchToProps)(Posts);
 
 
 export default PostsContainer;
+
+
